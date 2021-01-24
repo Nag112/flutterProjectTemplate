@@ -1,6 +1,6 @@
 # template
 
-A new Flutter project.
+A new Flutter project for templating the folder structure and MVVM configuration.
 
 ## Getting Started
 
