@@ -4,13 +4,12 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a project setup for a Flutter applications.
+This project contains several preinstalled packages and each has its own purpose
 
-A few resources to get you started if this is your first Flutter project:
+## Folder Structure
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+* Folder **_components** has all the commonly and globally used widgets
+* Folder **_services** has the globally used services like api service , userService, Location, NavigationService etc. 
+* Remaining folders are the feature folders and each folder has a feature for example authentication folder/feature has both login and signup, each of the login and signup folders contain their own view and viewmodel if necessary local service folder and also local components folder for easy access 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
