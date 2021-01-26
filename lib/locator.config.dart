@@ -8,6 +8,7 @@ import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stacked_services/stacked_services.dart';
 
+import '_services/apiService.dart';
 import '_services/coreServices.dart';
 import '_services/userService.dart';
 
@@ -21,8 +22,10 @@ GetIt $initGetIt(
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
   final coreServices = _$CoreServices();
+  gh.lazySingleton<ApiService>(() => ApiService());
   gh.lazySingleton<DialogService>(() => coreServices.dialogService);
   gh.lazySingleton<NavigationService>(() => coreServices.navigationService);
+  gh.lazySingleton<SnackbarService>(() => coreServices.snackBarService);
   gh.lazySingleton<UserService>(() => UserService());
   return get;
 }
@@ -32,4 +35,6 @@ class _$CoreServices extends CoreServices {
   DialogService get dialogService => DialogService();
   @override
   NavigationService get navigationService => NavigationService();
+  @override
+  SnackbarService get snackBarService => SnackbarService();
 }
