@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:connectivity/connectivity.dart';
+
 
 @lazySingleton
-class ApiService
-{
- static BaseOptions options = new BaseOptions(
+class ApiService {
+ 
+  static BaseOptions options = new BaseOptions(
     baseUrl: "https://jsonplaceholder.typicode.com",
     responseType: ResponseType.json,
     connectTimeout: 6000,
