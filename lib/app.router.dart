@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
-// AutoRouteGenerator
+// StackedRouterGenerator
 // **************************************************************************
 
 // ignore_for_file: public_member_api_docs
 
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
 
 import 'authentication/login/loginScreen.dart';
 import 'authentication/signUp/signUpScreen.dart';
@@ -27,7 +27,7 @@ class Routes {
   };
 }
 
-class Router extends RouterBase {
+class StackedRouter extends RouterBase {
   @override
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
@@ -37,8 +37,8 @@ class Router extends RouterBase {
     RouteDef(Routes.profileScreen, page: ProfileScreen),
   ];
   @override
-  Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
-  final _pagesMap = <Type, AutoRouteFactory>{
+  Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
+  final _pagesMap = <Type, StackedRouteFactory>{
     SplashScreen: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => SplashScreen(),

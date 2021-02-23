@@ -41,6 +41,7 @@ class SchimmerListTile extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 8.0),
           ),
           Expanded(
+            
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -64,10 +65,10 @@ class SchimmerListTile extends StatelessWidget {
                   width: 40.0,
                   height: 8.0,
                   color: Colors.white,
-                ),
+                )
               ],
             ),
-          )
+          ),
         ],
       ),
     );

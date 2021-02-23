@@ -1,8 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:injectable/injectable.dart';
-
-
-@lazySingleton
 class ApiService {
  
   static BaseOptions options = new BaseOptions(
