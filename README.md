@@ -9,9 +9,9 @@ This project contains several preinstalled packages and each has its own purpose
 
 ## Folder Structure
 
-* Folder **_components** has all the commonly and globally used widgets
-* Folder **_models** has all the models used in the app and also contains adapters for hive database
-* Folder **_services** has the globally used services like api service , userService, Location, NavigationService etc. 
+* Folder **_widgets** has all the commonly and globally used widgets
+* Folder **models** has all the models used in the app and also contains adapters for hive database
+* Folder **services** has the globally used services like api service , userService, Location, NavigationService etc. 
     * _services folder contains coreserivces.dart, userService.dart and apiservice.dart by default
     * apiService.dart file contains apiservice and it provides the apis with httpclient to fetch the data
     * coreServices.dart cotnains mainly navigationService, dialogServices and snackbarService. Bottomsheet services also comes under this category
