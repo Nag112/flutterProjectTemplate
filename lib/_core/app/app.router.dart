@@ -8,11 +8,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-
-import 'authentication/login/loginScreen.dart';
-import 'authentication/signUp/signUpScreen.dart';
-import 'profile/profileScreen.dart';
-import 'splashScreen/splashScreen.dart';
+import 'package:template/views/authentication/login/loginScreen.dart';
+import 'package:template/views/authentication/signUp/signUpScreen.dart';
+import 'package:template/views/profile/profileScreen.dart';
+import 'package:template/views/splashScreen/splashScreen.dart';
 
 class Routes {
   static const String splashScreen = '/';

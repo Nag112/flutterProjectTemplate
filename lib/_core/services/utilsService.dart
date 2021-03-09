@@ -2,7 +2,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:template/app.locator.dart';
+import 'package:template/_core/app/app.locator.dart';
+
 
 enum SnackbarType { greenAndRed, redAndWhite }
 enum DialogType { basic, form }

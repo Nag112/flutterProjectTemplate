@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:template/authentication/signUp/signUpViewModel.dart';
+
+import 'signUpViewModel.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override

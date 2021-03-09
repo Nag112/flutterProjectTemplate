@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
-class ApiService {
- 
+class HttpService {
   static BaseOptions options = new BaseOptions(
     baseUrl: "https://jsonplaceholder.typicode.com",
     responseType: ResponseType.json,

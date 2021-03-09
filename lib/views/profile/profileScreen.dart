@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:template/authentication/login/loginViewModel.dart';
 
-class LoginScreen extends StatelessWidget {
+import 'profileViewModel.dart';
+
+class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<LoginViewModel>.reactive(
-      viewModelBuilder: () => LoginViewModel(),
+    return ViewModelBuilder<ProfileViewModel>.reactive(
+      viewModelBuilder: () => ProfileViewModel(),
       builder: (context, model, _) {
         return Scaffold();
       },

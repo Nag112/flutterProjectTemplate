@@ -1,7 +1,7 @@
 import 'package:connectivity/connectivity.dart';
-import 'package:template/_services/utilsService.dart';
-import 'package:template/app.locator.dart';
-// import 'package:template/locator.dart';
+import 'package:template/_core/app/app.locator.dart';
+import 'package:template/_core/services/utilsService.dart';
+
 
 enum SnackbarType { greenAndRed, redAndWhite }
 
