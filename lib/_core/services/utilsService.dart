@@ -1,15 +1,15 @@
-import 'package:fluttertoast/fluttertoast.dart';
-
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:template/_core/app/app.locator.dart';
-
 
 enum SnackbarType { greenAndRed, redAndWhite }
 enum DialogType { basic, form }
 
 class UtilsService {
   final SnackbarService _snackBar = locator<SnackbarService>();
+
+  final DialogService _dialogService = locator<DialogService>();
   UtilsService() {
     _setupSnackbarUi();
     _setupDialogUi();
@@ -41,15 +41,8 @@ class UtilsService {
     );
   }
 
-  showToast({background = Colors.red, textColor = Colors.white, msg}) {
-    return Fluttertoast.showToast(
-        msg: msg,
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 1,
-        backgroundColor: background,
-        textColor: textColor,
-        fontSize: 16.0);
+  showToast(text, {background = Colors.red, textColor = Colors.white}) {
+    return BotToast.showText(text: text ?? "Toast Message missing");
   }
 
   Future<DialogResponse> showDialog({title, description, image = ""}) {
@@ -65,7 +58,6 @@ class UtilsService {
   }
 
   void _setupDialogUi() {
-    final dialogService = locator<DialogService>();
     final builders = {
       DialogType.basic: (context, sheetRequest, completer) =>
           _BasicDialog(request: sheetRequest, completer: completer),
@@ -73,13 +65,12 @@ class UtilsService {
           _FormDialog(request: sheetRequest, completer: completer),
     };
 
-    dialogService.registerCustomDialogBuilders(builders);
+    _dialogService.registerCustomDialogBuilders(builders);
   }
 
   void _setupSnackbarUi() {
-    final service = locator<SnackbarService>();
     // Registers a config to be used when calling showSnackbar
-    service.registerSnackbarConfig(
+    _snackBar.registerSnackbarConfig(
       SnackbarConfig(
         backgroundColor: Colors.redAccent,
         textColor: Colors.white,
@@ -87,7 +78,7 @@ class UtilsService {
         margin: EdgeInsets.zero,
       ),
     );
-    service.registerCustomSnackbarConfig(
+    _snackBar.registerCustomSnackbarConfig(
       variant: SnackbarType.greenAndRed,
       config: SnackbarConfig(
         backgroundColor: Colors.white,
@@ -96,7 +87,7 @@ class UtilsService {
         borderRadius: 1,
       ),
     );
-    service.registerCustomSnackbarConfig(
+    _snackBar.registerCustomSnackbarConfig(
       variant: SnackbarType.redAndWhite,
       config: SnackbarConfig(
         backgroundColor: Colors.red,
@@ -150,12 +141,13 @@ class _BasicDialog extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                RaisedButton(
+                ElevatedButton(
                     child: Text(
                       request.secondaryButtonTitle,
                       style: TextStyle(color: Colors.white),
                     ),
-                    color: Colors.red,
+                    style: ElevatedButton.styleFrom(
+                        textStyle: TextStyle(color: Colors.white)),
                     onPressed: () {
                       completer(
                         DialogResponse(confirmed: false),
@@ -164,12 +156,13 @@ class _BasicDialog extends StatelessWidget {
                 SizedBox(
                   width: 15,
                 ),
-                RaisedButton(
+                ElevatedButton(
                     child: Text(
                       request.mainButtonTitle,
                       style: TextStyle(color: Colors.white),
                     ),
-                    color: Colors.blue,
+                    style: ElevatedButton.styleFrom(
+                        textStyle: TextStyle(color: Colors.white)),
                     onPressed: () {
                       completer(
                         DialogResponse(confirmed: true),

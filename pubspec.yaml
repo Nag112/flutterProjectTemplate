@@ -23,25 +23,25 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  connectivity: ^2.0.2
-  cupertino_icons: ^1.0.0
-  dio: ^3.0.10
-  stacked_hooks: ^0.1.3+2
-  fluttertoast: ^7.1.6
-  hive: ^1.4.4+1
-  hive_flutter: ^0.3.1
-  path_provider: ^1.6.27
-  shimmer: ^1.1.2
-  stacked: ^1.9.5
-  stacked_services: ^0.7.2
-  velocity_x: ^1.4.1
+  bot_toast: ^4.0.1
+  connectivity: ^3.0.4
+  dio: ^4.0.0
+  firebase_auth: ^1.2.0
+  hive: ^2.0.4
+  hive_flutter: ^1.0.0
+  observable_ish: ^3.0.0
+  path_provider: ^2.0.1
+  shimmer: ^2.0.0
+  stacked: ^2.1.7
+  stacked_hooks: ^0.2.0
+  stacked_services: ^0.8.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: 
-  hive_generator: ^0.8.1
-  stacked_generator: 
+  build_runner: null
+  hive_generator: null
+  stacked_generator: null
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

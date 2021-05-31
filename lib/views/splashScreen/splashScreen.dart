@@ -1,4 +1,3 @@
-import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -6,7 +5,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: "This is splashScreen".text.make(),
+        child: Text("This is splashScreen"),
       ),
     );
   }
